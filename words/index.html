@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>I AM JANE DOE — In their words</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#eee;font-family:Georgia,serif}a{color:inherit;text-underline-offset:5px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 4vw;border-bottom:1px solid #292929}.brand{text-decoration:none;letter-spacing:.12em;font-size:21px}nav{font:12px monospace;letter-spacing:.1em}main{padding:65px 0 100px}.intro{padding:0 4vw 40px}h1{font-size:clamp(48px,8vw,112px);font-weight:400;line-height:1;margin:0 0 20px;letter-spacing:-.04em}.intro p{font-size:20px;max-width:650px;line-height:1.5}.note{font:12px/1.7 monospace!important;color:#aaa;max-width:740px!important}.wall{display:flex;flex-wrap:wrap;gap:0;padding:0 1vw}.tape{flex:1 1 auto;max-width:100%;margin:0;border:1px solid #333;border-radius:0;padding:22px 18px;background:linear-gradient(178deg,#262626 0,#090909 12%,#141414 80%,#303030 100%);color:#eee;font:bold clamp(18px,2.05vw,32px)/1.5 'Courier New',monospace;letter-spacing:.11em;text-transform:uppercase;text-shadow:0 1px 0 #fff,1px 2px 1px #777,-1px -1px 1px #000;cursor:pointer;text-align:left;box-shadow:inset 0 1px #555,inset 0 -2px #000;overflow-wrap:anywhere}.tape:hover{background:#282828}.tape:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid white;outline-offset:-4px}.below{padding:30px 4vw;color:#888;font:12px/1.8 monospace;display:flex;justify-content:space-between;gap:25px}#about{padding:50px 4vw 30px;max-width:820px}h2{font-size:30px;font-weight:400}#about p{font-size:17px;line-height:1.8;color:#bbb}.top{position:fixed;bottom:22px;right:24px;background:#080808;border:1px solid #666;padding:12px 18px;text-decoration:none;font:13px monospace}dialog{color:#eee;background:#101010;border:1px solid #777;max-width:700px;width:calc(100% - 32px);padding:36px;max-height:85vh;overflow:auto}dialog::backdrop{background:#000c}dialog blockquote{margin:30px 0;font:clamp(25px,4vw,39px)/1.3 Georgia,serif}dialog p{line-height:1.7;color:#bbb}dialog .meta{font:12px/1.8 monospace}#close{float:right;border:0;background:none;color:white;font:30px monospace;cursor:pointer}#speaker{font-size:24px;margin:24px 0 5px}#source{display:inline-block;margin:16px 0}footer{padding:25px 4vw 65px;font:11px/1.8 monospace;color:#777;border-top:1px solid #292929}@media(max-width:600px){header{padding:22px 5vw}.brand{font-size:16px}nav{font-size:10px}main{padding-top:42px}.intro{padding-left:5vw;padding-right:5vw}.intro p{font-size:17px}.tape{padding:17px 13px;letter-spacing:.07em;font-size:18px}.below{display:block}dialog{padding:24px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@font-face{font-family:Emboss;src:url(data:font/woff;base64,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) format('woff');font-display:swap}
+/* A continuous field of black embossing tape, with no gutters. */
+.wall{padding:0 1vw;align-content:start;isolation:isolate}
+.tape{position:relative;overflow:hidden;min-height:56px;padding:12px 15px;border:0;border-radius:0;background:linear-gradient(180deg,#343434 0,#181818 3%,#080808 10%,#131313 46%,#0a0a0a 86%,#272727 97%,#0a0a0a 100%);font:400 clamp(17px,1.65vw,25px)/1.5 Emboss,monospace;letter-spacing:.13em;box-shadow:inset 0 1px #7778,inset 1px 0 #9995,inset -1px 0 #000,inset 0 -1px #000;text-shadow:none}
+.tape:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.13;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='80'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E")}
+.tape:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.28;background:linear-gradient(169deg,transparent 46%,#aaa5 46.2%,transparent 46.5%),linear-gradient(9deg,transparent 93%,#aaa5 93.2%,transparent 93.5%)}
+.tape:nth-child(3n){background-color:#161616}.emboss{position:relative;z-index:1;color:#e7e7e2;-webkit-text-stroke:.3px #deded9;text-shadow:0 -1px 0 #fff,1px 1px 0 #777,1px 2px 0 #444,2px 3px 2px #000,-1px -1px 2px #000;filter:drop-shadow(0 0 .4px #fff6)}
+.tape:hover{filter:brightness(1.3)}.tape:focus-visible{z-index:2;outline:2px solid white;outline-offset:-3px}
+main{padding-top:50px}.intro{padding-bottom:30px}h1{font-size:clamp(48px,6.6vw,96px)}
+@media(max-width:600px){.tape{font-size:16px;letter-spacing:.09em;padding:12px 11px;min-height:50px}.wall{padding:0}.intro{padding-bottom:24px}main{padding-top:38px}.tape .emboss{overflow-wrap:normal}}
+
+/* Vintage embossing letterforms. Font has built-in distressed highlights. */
+.tape{font-family:Emboss,monospace;font-size:clamp(50px,4.2vw,66px);line-height:.92;letter-spacing:.035em;padding:6px 16px 10px;min-height:58px}
+.emboss{color:#f2f1ec;-webkit-text-stroke:.45px #e8e8e3;text-shadow:0 -0.6px 0 white,.7px .8px 0 #8d8d88,1.3px 1.8px .6px #303030,2px 3px 2px #000;filter:none}
+.tape:before{opacity:.16}.tape:after{opacity:.2}
+@media(max-width:600px){.tape{font-size:46px;line-height:.97;letter-spacing:.025em;padding:5px 11px 10px;min-height:51px}.emboss{-webkit-text-stroke:.35px #e8e8e3}}
+
+/* Tighter tape wall: less tracking, less padding, and compact rows. */
+.tape{letter-spacing:0;padding:0 8px 3px;min-height:0;line-height:.76}
+@media(max-width:600px){.tape{letter-spacing:0;padding:0 6px 3px;min-height:0;line-height:.8}}
+
+/* Smaller, lighter embossing; short phrases share compact rows. */
+.tape{font-size:clamp(36px,3vw,46px);font-weight:400;letter-spacing:0;line-height:.76;padding:0 4px 2px;min-height:0;flex:1 1 auto}
+.emboss{-webkit-text-stroke:0;color:#deded9;text-shadow:0 -.35px 0 #fff,.45px .65px 0 #666,1px 1.5px 1px #000;filter:none}
+@media(max-width:600px){.tape{font-size:34px;letter-spacing:0;line-height:.8;padding:0 3px 2px;min-height:0}.emboss{-webkit-text-stroke:0}}
+
+/* Approved screenshot baseline. */
+.tape{font:400 clamp(17px,1.65vw,25px)/1.5 Emboss,monospace;letter-spacing:.13em;padding:12px 15px;min-height:56px}
+.emboss{color:#e7e7e2;-webkit-text-stroke:.3px #deded9;text-shadow:0 -1px 0 #fff,1px 1px 0 #777,1px 2px 0 #444,2px 3px 2px #000,-1px -1px 2px #000;filter:drop-shadow(0 0 .4px #fff6)}
+@media(max-width:600px){.tape{font-size:16px;letter-spacing:.09em;padding:12px 11px;min-height:50px}.emboss{-webkit-text-stroke:.3px #deded9}}
+
+/* Each physical tape is a single line; longer excerpts get continuation tapes. */
+.tape{white-space:nowrap;overflow-wrap:normal;word-break:normal;flex-shrink:0}
+.emboss{white-space:nowrap;overflow-wrap:normal}
+
+/* Desktop size requested: compact 14px Dymo lettering. */
+@media(min-width:601px){.tape{font-size:14px;line-height:1.5;padding:9px 12px;min-height:39px}}
+
+/* Sister-site typography: match Predatorpedia's supporting copy. */
+.intro p,#about p,dialog p,dialog .meta,.below,footer,nav,#source{
+ font-family:monospace;font-size:11px;font-weight:200;line-height:1.85;
+}
+.note{font:200 11px/1.85 monospace!important}
+
+.submit-words{display:inline-flex;align-items:center;gap:24px;margin-top:10px;padding:13px 0;border:0;border-bottom:1px solid currentColor;background:transparent;color:#eee;font:200 11px/1.5 monospace;letter-spacing:.04em;cursor:pointer}
+.submit-words span{font-size:16px}.submit-words:hover{color:#fff}
+#submission-info h2{font:400 30px/1.2 Georgia,serif;margin-top:18px}
+.submit-close{float:right;border:0;background:transparent;color:#eee;font:30px monospace;cursor:pointer}
+
+/* Submission link sits right, between the title and its description. */
+.intro h1{margin-bottom:0}
+.submit-between{display:flex;justify-content:flex-end;width:100%;padding:8px 0 14px}
+.submit-between .submit-words{margin:0;padding:10px 0;gap:24px}
+.intro>.submit-between+p{margin-top:0}
+@media(max-width:600px){.submit-between{padding:10px 0 18px}}
+</style></head><body id="top"><header><a class="brand" href="#top">I AM JANE DOE</a><nav><a href="#about">ABOUT</a></nav></header><main><div class="intro"><h1>In their words.</h1><div class="submit-between"><button class="submit-words" id="submit-words" type="button" aria-haspopup="dialog" aria-controls="submission-info">Share your words <span aria-hidden="true">+</span></button></div><p>Accounts of sexual violence, harassment, and the fight to be heard.</p><p class="note">Select a statement to read its attribution and source.<br>Content includes accounts of sexual abuse. <span id="selection-count"></span></p></div><section class="wall" id="wall" aria-label="Survivors’ statements"></section><div class="below"><span><span id="counts"></span></span><span>Every fragment belongs to a larger account.</span></div><section id="about"><h2>A record of what they said.</h2><p>This expanding selection draws on public statements connected to cases featured in Predatorpedia. The words belong to the people credited in each source. The excerpts are not anonymous submissions, and their inclusion does not imply participation in or endorsement of this project.</p><p>Each label opens its context and a link to the original reporting or court record. Excerpts preserve the source wording; capital letters are a display treatment. Long statements continue on separate strips; every strip opens the complete excerpt. English translations are identified. Portraits are separate and are not linked to these statements.</p><p class="note">Submissions are opening soon. Contributions will be reviewed before publication.</p></section></main><footer>I AM JANE DOE · STATEMENTS<br>Publicly sourced excerpts · Selection prepared November 8, 2026</footer><a class="top" href="#top" aria-label="Back to top">↑ TOP</a><dialog id="detail" aria-labelledby="speaker"><button id="close" aria-label="Close statement">×</button><p class="meta">STATEMENT / SOURCE</p><blockquote id="quote"></blockquote><h2 id="speaker"></h2><p class="meta" id="occasion"></p><p id="context"></p><a id="source" target="_blank" rel="noopener noreferrer">Read the source +</a><p class="meta" id="edition"></p></dialog>
+<dialog id="submission-info" aria-labelledby="submission-title"><button class="submit-close" id="submission-close" type="button" aria-label="Close submission information">×</button><h2 id="submission-title">Share your words.</h2><p>Submissions opening soon.</p><p>You’ll be able to share your words through a form here. Contributions will be reviewed before publication.</p></dialog>
+<script>
+// Add future verified entries here. Keep exact wording and an attribution/source for every entry.
+const entries=[
+{quote:'You should have never done this to me.',name:'Chanel Miller',occasion:'Victim impact statement · 2016 · Brock Turner case',context:'Miller addressed the harm of the assault and the burden of the criminal proceedings. CBS published the statement alongside her reading of it.',url:'https://www.cbsnews.com/news/chanel-miller-reads-her-entire-victim-impact-statement-she-wrote-to-address-brock-turner-60-minutes-2020-08-09/',edition:'Short excerpt from a longer statement; source publication: August 9, 2020.'},
+{quote:'My hopes were quickly dashed, and my dreams were stolen.',name:'Virginia Roberts Giuffre',occasion:'Federal court hearing · August 27, 2019 · Jeffrey Epstein case',context:'Giuffre described being recruited by Ghislaine Maxwell and the loss of her hopes for a career as a massage therapist. This is her account in the hearing transcript.',url:'https://www.justice.gov/multimedia/Court%20Records/United%20States%20v.%20Epstein%2C%20No.%20119-cr-00490%20%28S.D.N.Y.%202019%29/053.pdf#page=56',edition:'Court transcript, document 53, page 56; filed September 3, 2019.'},
+{quote:'I fought with this volley of ‘no’s,’ which he ignored.',name:'Ashley Judd',occasion:'Interview with Diane Sawyer · October 26, 2017 · Harvey Weinstein allegations',context:'Judd described an alleged hotel-room encounter that she had understood would be a business meeting. This is her public account of alleged harassment, not a finding that this specific incident was adjudicated.',url:'https://abcnews.com/Entertainment/ashley-judd-opens-diane-sawyer-harvey-weinstein-allegations/story?id=50717934',edition:'Excerpt from an ABC News interview. The report notes Weinstein’s denial.'},
+{quote:'We have our voices, and we are not going anywhere.',name:'Aly Raisman',occasion:'Victim impact statement · January 19, 2018 · Larry Nassar sentencing',context:'Raisman addressed Nassar at his sentencing hearing and challenged the institutions that failed to protect athletes.',url:'https://time.com/5110455/aly-raisman-larry-nassar-testimony-trial/',edition:'Excerpt quoted by TIME in its January 19, 2018 report.'},
+{quote:'it’s not for us to have shame, it’s for them.',name:'Gisèle Pelicot',occasion:'Court testimony · October 23, 2024 · Mazan rape trial',context:'Pelicot explained her decision to make the trial public and place responsibility on those who committed the abuse.',url:'https://www.theguardian.com/world/2024/oct/23/gisele-pelicot-rape-trial-france-court',edition:'Excerpt within a longer sentence. English translation as reported by The Guardian.'},
+{quote:'It took me eight months to even talk about what happened.',name:'Chanel Miller',occasion:'Victim impact statement · 2016 · Brock Turner case',context:'Miller described the difficulty of speaking about the assault and its effects on her relationships.',url:'https://www.cbsnews.com/news/chanel-miller-reads-her-entire-victim-impact-statement-she-wrote-to-address-brock-turner-60-minutes-2020-08-09/',edition:'Short excerpt from a longer statement; source publication: August 9, 2020.'},
+{quote:'He did not act alone',name:'Virginia Roberts Giuffre',occasion:'Federal court hearing · August 27, 2019 · Jeffrey Epstein case',context:'Giuffre urged continued accountability after Epstein’s death. These words are an excerpt from her account, not a finding against every person connected to him.',url:'https://www.justice.gov/multimedia/Court%20Records/United%20States%20v.%20Epstein%2C%20No.%20119-cr-00490%20%28S.D.N.Y.%202019%29/053.pdf#page=56',edition:'Excerpt within a longer sentence; court transcript, page 56.'},
+{quote:'And then I just fled.',name:'Ashley Judd',occasion:'Interview with Diane Sawyer · October 26, 2017 · Harvey Weinstein allegations',context:'Judd described leaving the hotel room after trying to deflect Weinstein’s alleged demands. Her allegation is presented as her account.',url:'https://abcnews.com/Entertainment/ashley-judd-opens-diane-sawyer-harvey-weinstein-allegations/story?id=50717934',edition:'Excerpt from an ABC News interview. The report notes Weinstein’s denial.'}
+];
+entries.push(...[{"quote": "It would have been more comfortable to remain silent.", "name": "Anita Hill", "occasion": "Senate testimony · October 11, 1991 · Clarence Thomas", "context": "Hill described alleged workplace sexual harassment. Thomas denied her allegations. This was confirmation-hearing testimony, not a criminal verdict.", "url": "https://openbooks.library.umass.edu/giftsofspeech/chapter/anita-hill-opening-statement-sexual-harassment-hearings-concerning-judge-clarence-thomas-october-11-1991/", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "I could not keep silent.", "name": "Anita Hill", "occasion": "Senate testimony · October 11, 1991 · Clarence Thomas", "context": "Hill described alleged workplace sexual harassment. Thomas denied her allegations. This was confirmation-hearing testimony, not a criminal verdict.", "url": "https://openbooks.library.umass.edu/giftsofspeech/chapter/anita-hill-opening-statement-sexual-harassment-hearings-concerning-judge-clarence-thomas-october-11-1991/", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "Indelible in the hippocampus is the laughter.", "name": "Christine Blasey Ford", "occasion": "Senate testimony · September 27, 2018 · Brett Kavanaugh", "context": "Ford recalled what she described as an assault during high school. Kavanaugh denied the allegation; the hearing did not adjudicate a criminal charge.", "url": "https://abcnews.com/Politics/moments-mattered-ford-kavanaugh-hearings/story?id=58123592", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "It broke me down to someone I never thought I would become.", "name": "Casandra “Cassie” Ventura", "occasion": "Public statement · May 23, 2024 · Sean Combs", "context": "Ventura spoke after footage of Combs assaulting her in a hotel became public. Combs apologized for the conduct shown in the video.", "url": "https://abcnews.com/GMA/Culture/cassie-breaks-silence-release-video-showing-diddy-assault/story?id=110500322", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "No one should carry this weight alone.", "name": "Casandra “Cassie” Ventura", "occasion": "Public statement · May 23, 2024 · Sean Combs", "context": "Ventura spoke after footage of Combs assaulting her in a hotel became public. Combs apologized for the conduct shown in the video.", "url": "https://abcnews.com/GMA/Culture/cassie-breaks-silence-release-video-showing-diddy-assault/story?id=110500322", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "He lied and shattered my reputation and I’m here to try to get my life back.", "name": "E. Jean Carroll", "occasion": "Civil trial testimony · April 26, 2023 · Donald Trump", "context": "Carroll described the assault she alleged and the damage caused by Trump’s denial. These words were spoken during the civil trial, before the jury’s verdict; they are her testimony, not the wording of a criminal finding.", "url": "https://ktvz.com/politics/cnn-us-politics/2023/04/26/carroll-testifies-donald-trump-raped-me-and-when-i-wrote-about-it-he-said-it-didnt-happen/", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "I felt completely alone, unable to trust anyone, including myself.", "name": "Andrea Constand", "occasion": "Written victim impact statement · September 2018 · Bill Cosby", "context": "Her account of isolation after the assault.", "url": "https://www.cbsnews.com/news/andrea-constands-impact-statement-bill-cosby-robbed-me-of-my-health-vitality-and-trust-2018-09-25/", "edition": "Historical sentencing statement; not a statement of current case status."}, {"quote": "I was confused, and then I realized what was happening.", "name": "Evelyn Yang", "occasion": "CNN interview · January 2020 · Robert Hadden", "context": "Yang described an assault during a medical appointment. PBS replayed her interview while examining Columbia’s response to complaints about Hadden.", "url": "https://www.pbs.org/video/abuse-scandal-1700687965/", "edition": "CNN interview excerpts transcribed by PBS NewsHour, November 22, 2023."}, {"quote": "I was just waiting for it to be over.", "name": "Evelyn Yang", "occasion": "CNN interview · January 2020 · Robert Hadden", "context": "Yang described an assault during a medical appointment. PBS replayed her interview while examining Columbia’s response to complaints about Hadden.", "url": "https://www.pbs.org/video/abuse-scandal-1700687965/", "edition": "CNN interview excerpts transcribed by PBS NewsHour, November 22, 2023."}, {"quote": "I just wanted to stand up for myself, first and foremost.", "name": "Gretchen Carlson", "occasion": "Interview · July 2016 · Roger Ailes", "context": "Carlson discussed filing her sexual-harassment lawsuit. Ailes denied her allegations.", "url": "https://www.goodmorningamerica.com/news/story/gretchen-carlson-nyt-harassing-language-roger-ailes-continuous-40536606", "edition": "New York Times interview quoted by Good Morning America, July 13, 2016."}, {"quote": "I was terrified. I was shaking.", "name": "Charlotte Bennett", "occasion": "CBS interview · March 2021 · Andrew Cuomo", "context": "Bennett’s account of alleged workplace harassment.", "url": "https://www.cbsnews.com/news/cuomo-accuser-charlotte-bennett-sexual-harassment-claims-textbook-abuser/", "edition": "The source includes Cuomo’s response."}, {"quote": "How much is a little girl worth?", "name": "Rachael Denhollander", "occasion": "Victim impact statement · January 24, 2018 · Larry Nassar", "context": "Denhollander addressed the court about the value of protecting children and the consequences of abuse.", "url": "https://sports.yahoo.com/rachael-denhollander-first-woman-accuse-larry-nassar-receives-standing-ovation-courtroom-191725928.html", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "You broke me in unfathomable ways but you did not break my spirit.", "name": "Sarah Ransome", "occasion": "Victim impact statement · June 28, 2022 · Ghislaine Maxwell / Jeffrey Epstein", "context": "Ransome spoke at Maxwell’s sentencing. The report distinguishes her allegations from the conduct charged in that trial.", "url": "https://www.pbs.org/newshour/politics/ghislaine-maxwell-sentenced-to-20-years-in-prison", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "I was brainwashed and manipulated into submission.", "name": "Evan Rachel Wood", "occasion": "Public statement · February 2021 · Marilyn Manson / Brian Warner", "context": "Wood alleged abuse in her relationship with Warner. Warner denied the allegations. This is her account, not a criminal conviction.", "url": "https://abcnews.com/GMA/Culture/evan-rachel-wood-opens-allegations-abuse-marilyn-manson/story?id=83432532", "edition": "2021 statement quoted in ABC News reporting, March 2022."}, {"quote": "I was raped in my own dorm bed.", "name": "Emma Sulkowicz", "occasion": "Interview · 2014 · Columbia University", "context": "Sulkowicz described the allegation behind Mattress Performance (Carry That Weight). The accused student denied it. This excerpt records Sulkowicz’s account, not a court finding.", "url": "https://www.scrippsnews.com/us-news/student-carrying-mattress-until-alleged-rapist-leaves-campus", "edition": "Columbia Daily Spectator interview quoted by Scripps News."}, {"quote": "You made every part of me turn on myself.", "name": "Niesha Trout", "occasion": "Victim impact statement · September 7, 2023 · Danny Masterson", "context": "Trout addressed Masterson at his sentencing following convictions on two rape counts. She is identified here by the name she publicly used.", "url": "https://www.legalaffairsandtrials.com/p/danny-masterson-sentencing-update", "edition": "Courtroom reporting by Meghann Cuniff."}, {"quote": "When you raped me, you stole from me.", "name": "Niesha Trout", "occasion": "Victim impact statement · September 7, 2023 · Danny Masterson", "context": "Trout addressed Masterson at his sentencing following convictions on two rape counts. She is identified here by the name she publicly used.", "url": "https://www.legalaffairsandtrials.com/p/danny-masterson-sentencing-update", "edition": "Courtroom reporting by Meghann Cuniff."}, {"quote": "The shame in this story belongs to him.", "name": "Brooke Nevils", "occasion": "Public statement · October 2019 · Matt Lauer", "context": "Nevils responded to Lauer’s denial of her rape allegation. Lauer said their encounter was consensual. This is her statement, not an adjudicated finding.", "url": "https://www.etonline.com/matt-lauers-accuser-brooke-nevils-calls-his-open-letter-a-case-study-in-victim-blaming-134134", "edition": "Short excerpt; follow the source for the full account."}, {"quote": "Why yesterday you touch my breast?", "name": "Ambra Battilana Gutierrez", "occasion": "Recorded conversation · 2015 · Harvey Weinstein", "context": "Gutierrez confronted Weinstein during a police-arranged recording after reporting that he had groped her. The excerpt retains the spoken grammar.", "url": "https://www.pbs.org/wgbh/frontline/documentary/weinstein/", "edition": "Recording transcribed in PBS FRONTLINE’s Weinstein documentary."}, {"quote": "You stole seven years of my life.", "name": "India Oxenberg", "occasion": "Victim impact statement · October 27, 2020 · Keith Raniere / NXIVM", "context": "Oxenberg addressed Raniere at sentencing about exploitation and its continuing effects.", "url": "https://seduceddocumentary.com/2020/10/30/india-oxenbergs-victim-impact-statement-to-keith-raniere/", "edition": "Statement published by the documentary Seduced, credited to India Oxenberg."}, {"quote": "Will I have to feel this for the rest of my life?", "name": "India Oxenberg", "occasion": "Victim impact statement · October 27, 2020 · Keith Raniere / NXIVM", "context": "Oxenberg addressed Raniere at sentencing about exploitation and its continuing effects.", "url": "https://seduceddocumentary.com/2020/10/30/india-oxenbergs-victim-impact-statement-to-keith-raniere/", "edition": "Statement published by the documentary Seduced, credited to India Oxenberg."}, {"quote": "I hope that we as women will continue to speak out, will continue to support one another.", "name": "Rowena Chiu", "occasion": "ABC interview · February 2020 · Harvey Weinstein", "context": "Chiu discussed barriers to seeking redress after the assault she alleged. Her statement addresses the wider silence around abuse; it is not a verdict on her individual allegation.", "url": "https://www.abc.net.au/news/2020-02-19/harvey-weinsteins-former-personal-assistant-speaks/11982086", "edition": "Short excerpt; follow the source for the full account."}]);
+entries.push(...[
+  {
+    "quote": "I was confused, in distress and in disbelief.",
+    "name": "Miriam Haley",
+    "occasion": "Victim impact statement · March 11, 2020 · Harvey Weinstein sentencing",
+    "context": "Haley described the emotional aftermath of the assault and her fear of retaliation. These excerpts come from her statement at the 2020 sentencing.",
+    "url": "https://www.thewrap.com/harvey-weinstein-sentencing-read-miriam-haley-full-statement/",
+    "edition": "Short excerpt from the statement reproduced by TheWrap; historical testimony."
+  },
+  {
+    "quote": "I’ve had panic attacks and nightmares.",
+    "name": "Miriam Haley",
+    "occasion": "Victim impact statement · March 11, 2020 · Harvey Weinstein sentencing",
+    "context": "Haley described the emotional aftermath of the assault and her fear of retaliation. These excerpts come from her statement at the 2020 sentencing.",
+    "url": "https://www.thewrap.com/harvey-weinstein-sentencing-read-miriam-haley-full-statement/",
+    "edition": "Short excerpt from the statement reproduced by TheWrap; historical testimony."
+  },
+  {
+    "quote": "I’ve feared for my life.",
+    "name": "Miriam Haley",
+    "occasion": "Victim impact statement · March 11, 2020 · Harvey Weinstein sentencing",
+    "context": "Haley described the emotional aftermath of the assault and her fear of retaliation. These excerpts come from her statement at the 2020 sentencing.",
+    "url": "https://www.thewrap.com/harvey-weinstein-sentencing-read-miriam-haley-full-statement/",
+    "edition": "Short excerpt from the statement reproduced by TheWrap; historical testimony."
+  },
+  {
+    "quote": "I didn't want to talk about what happened.",
+    "name": "Annabella Sciorra",
+    "occasion": "Court testimony · January 23, 2020 · Harvey Weinstein trial",
+    "context": "Sciorra testified about an alleged assault and its aftermath. Weinstein denied nonconsensual sex; these words are her testimony, not a separate verdict on this allegation.",
+    "url": "https://abcnews.com/US/annabella-sciorra-testifies-harvey-weinstein-trial/story?id=68475845",
+    "edition": "Short excerpt from testimony reported by ABC News; some excerpts end within a longer statement."
+  },
+  {
+    "quote": "I disappeared.",
+    "name": "Annabella Sciorra",
+    "occasion": "Court testimony · January 23, 2020 · Harvey Weinstein trial",
+    "context": "Sciorra testified about an alleged assault and its aftermath. Weinstein denied nonconsensual sex; these words are her testimony, not a separate verdict on this allegation.",
+    "url": "https://abcnews.com/US/annabella-sciorra-testifies-harvey-weinstein-trial/story?id=68475845",
+    "edition": "Short excerpt from testimony reported by ABC News; some excerpts end within a longer statement."
+  },
+  {
+    "quote": "At the time, I didn't understand that was rape",
+    "name": "Annabella Sciorra",
+    "occasion": "Court testimony · January 23, 2020 · Harvey Weinstein trial",
+    "context": "Sciorra testified about an alleged assault and its aftermath. Weinstein denied nonconsensual sex; these words are her testimony, not a separate verdict on this allegation.",
+    "url": "https://abcnews.com/US/annabella-sciorra-testifies-harvey-weinstein-trial/story?id=68475845",
+    "edition": "Short excerpt from testimony reported by ABC News; some excerpts end within a longer statement."
+  },
+  {
+    "quote": "I had felt very much alone when these things happened",
+    "name": "Lupita Nyong’o",
+    "occasion": "Personal essay · October 19, 2017 · Harvey Weinstein allegations",
+    "context": "Nyong’o described isolation and self-blame after alleged encounters with Weinstein. His spokesperson disputed her account.",
+    "url": "https://abcnews.com/Entertainment/lupita-nyongo-writes-harvey-weinstein-propositioned-personal-essay/story?id=50601106",
+    "edition": "Excerpt within a longer sentence from her New York Times essay, quoted by ABC News on October 20, 2017."
+  },
+  {
+    "quote": "I had blamed myself for a lot of it",
+    "name": "Lupita Nyong’o",
+    "occasion": "Personal essay · October 19, 2017 · Harvey Weinstein allegations",
+    "context": "Nyong’o described isolation and self-blame after alleged encounters with Weinstein. His spokesperson disputed her account.",
+    "url": "https://abcnews.com/Entertainment/lupita-nyongo-writes-harvey-weinstein-propositioned-personal-essay/story?id=50601106",
+    "edition": "Excerpt within a longer sentence from her New York Times essay, quoted by ABC News on October 20, 2017."
+  },
+  {
+    "quote": "I waited, and I waited and heard nothing.",
+    "name": "McKayla Maroney",
+    "occasion": "Prepared Senate testimony · September 15, 2021 · FBI handling of Larry Nassar abuse reports",
+    "context": "Maroney described reporting Nassar’s abuse to the FBI and the failure to act. The second excerpt refers to the FBI agents who handled her report.",
+    "url": "https://www.judiciary.senate.gov/imo/media/doc/Maroney%20Testimony.pdf",
+    "edition": "Excerpt from written testimony submitted to the Senate Judiciary Committee, PDF page 2; the second excerpt ends within a longer sentence."
+  },
+  {
+    "quote": "They betrayed me, they betrayed my trust",
+    "name": "McKayla Maroney",
+    "occasion": "Prepared Senate testimony · September 15, 2021 · FBI handling of Larry Nassar abuse reports",
+    "context": "Maroney described reporting Nassar’s abuse to the FBI and the failure to act. The second excerpt refers to the FBI agents who handled her report.",
+    "url": "https://www.judiciary.senate.gov/imo/media/doc/Maroney%20Testimony.pdf",
+    "edition": "Excerpt from written testimony submitted to the Senate Judiciary Committee, PDF page 2; the second excerpt ends within a longer sentence."
+  },
+  {
+    "quote": "For years, he was my monster.",
+    "name": "Salma Hayek",
+    "occasion": "Personal essay · December 13, 2017 · Harvey Weinstein allegations",
+    "context": "Hayek described alleged harassment and coercion while making Frida. These excerpts express her account of how Weinstein treated her.",
+    "url": "https://www.glamour.com/story/salma-hayek-weinstein-op-ed-harvey-is-my-monster-too",
+    "edition": "Short excerpt from her New York Times essay, quoted by Glamour on December 13, 2017."
+  },
+  {
+    "quote": "In his eyes, I was not an artist.",
+    "name": "Salma Hayek",
+    "occasion": "Personal essay · December 13, 2017 · Harvey Weinstein allegations",
+    "context": "Hayek described alleged harassment and coercion while making Frida. These excerpts express her account of how Weinstein treated her.",
+    "url": "https://www.glamour.com/story/salma-hayek-weinstein-op-ed-harvey-is-my-monster-too",
+    "edition": "Short excerpt from her New York Times essay, quoted by Glamour on December 13, 2017."
+  },
+  {
+    "quote": "I wasn’t even a person.",
+    "name": "Salma Hayek",
+    "occasion": "Personal essay · December 13, 2017 · Harvey Weinstein allegations",
+    "context": "Hayek described alleged harassment and coercion while making Frida. These excerpts express her account of how Weinstein treated her.",
+    "url": "https://www.glamour.com/story/salma-hayek-weinstein-op-ed-harvey-is-my-monster-too",
+    "edition": "Short excerpt from her New York Times essay, quoted by Glamour on December 13, 2017."
+  },
+  {
+    "quote": "I blame Larry Nassar and I also blame an entire system that enabled and perpetrated his abuse",
+    "name": "Simone Biles",
+    "occasion": "Senate testimony · September 15, 2021 · Larry Nassar abuse and institutional failures",
+    "context": "Biles addressed institutional responsibility for enabling Nassar’s abuse during the Senate hearing on the FBI investigation.",
+    "url": "https://www.pbs.org/newshour/nation/watch-simone-biles-points-to-systemic-issues-that-enabled-larry-nassar-sexual-abuse",
+    "edition": "Excerpt from spoken testimony as reported by PBS News; the prepared written testimony uses slightly different wording."
+  }
+]);
+// Set this to the Jane Doe Tally form URL when ready.
+const SUBMISSION_FORM_URL='';
+const submissionInfo=document.querySelector('#submission-info');
+const submitWords=document.querySelector('#submit-words');
+submitWords.addEventListener('click',()=>{if(SUBMISSION_FORM_URL){window.open(SUBMISSION_FORM_URL,'_blank','noopener,noreferrer');}else{submissionInfo.showModal();}});
+document.querySelector('#submission-close').addEventListener('click',()=>submissionInfo.close());
+submissionInfo.addEventListener('close',()=>submitWords.focus());
+submissionInfo.addEventListener('click',e=>{if(e.target!==submissionInfo)return;const r=submissionInfo.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)submissionInfo.close();});
+const dialog=document.querySelector('#detail');let origin;
+document.querySelector('#counts').textContent=entries.length+' EXCERPTS / '+new Set(entries.map(e=>e.name)).size+' VOICES';
+document.querySelector('#selection-count').textContent='An expanding selection from Predatorpedia.';
+const strips=entries.flatMap(e=>e.name==='Rowena Chiu' ? [
+ {...e,displayQuote:'I hope that we as women will continue to speak out,'},
+ {...e,displayQuote:'will continue to support one another.'}
+] : [e]);
+function renderTapes(){
+const wall=document.querySelector('#wall');
+const focused=document.activeElement;
+const focusText=focused?.classList.contains('tape') ? focused.title : null;
+const style=getComputedStyle(wall);
+const available=wall.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-2;
+if(available<1)return;
+const probe=document.createElement('button');probe.className='tape';probe.type='button';probe.tabIndex=-1;probe.setAttribute('aria-hidden','true');
+probe.style.cssText='position:fixed;left:-100000px;top:0;visibility:hidden;width:max-content;max-width:none;flex:none;white-space:nowrap;';
+const sample=document.createElement('span');sample.className='emboss';probe.append(sample);wall.append(probe);
+const fitted=[];
+for(const e of strips){
+ let line='';
+ const words=(e.displayQuote||e.quote).split(/\s+/);
+ for(const word of words){
+  const candidate=line ? line+' '+word : word;
+  sample.textContent=candidate;
+  if(line && probe.getBoundingClientRect().width>available){fitted.push({...e,displayQuote:line});line=word;}else{line=candidate;}
+ }
+ if(line)fitted.push({...e,displayQuote:line});
+}
+probe.remove();wall.replaceChildren();
+fitted.forEach((e)=>{const b=document.createElement('button');b.className='tape';b.type='button';const ink=document.createElement('span');ink.className='emboss';ink.textContent=e.displayQuote||e.quote;b.append(ink);b.title=e.name+' · '+e.occasion;b.setAttribute('aria-label',(e.displayQuote||e.quote)+' — attribution and source');b.onclick=()=>{origin=b;document.querySelector('#quote').textContent='“'+e.quote+'”';document.querySelector('#speaker').textContent=e.name;document.querySelector('#occasion').textContent=e.occasion;document.querySelector('#context').textContent=e.context;document.querySelector('#source').href=e.url;document.querySelector('#edition').textContent=e.edition;dialog.showModal()};document.querySelector('#wall').append(b);
+// Protect exceptionally long single words on narrow screens without wrapping.
+if(b.scrollWidth>b.clientWidth){const size=parseFloat(getComputedStyle(b).fontSize);const scale=(b.clientWidth-32)/Math.max(1,ink.getBoundingClientRect().width);b.style.fontSize=Math.max(10,size*scale)+'px';}
+});
+if(focusText && !dialog.open){const target=[...wall.children].find(b=>b.title===focusText);target?.focus({preventScroll:true});}
+}
+renderTapes();
+document.fonts.ready.then(renderTapes);
+let resizeFrame;
+let previousWidth=document.querySelector('#wall').clientWidth;
+new ResizeObserver(items=>{const width=items[0].target.clientWidth;if(Math.abs(width-previousWidth)<1)return;previousWidth=width;cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(renderTapes)}).observe(document.querySelector('#wall'));
+window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(renderTapes)});
+
+document.querySelector('#close').onclick=()=>dialog.close();dialog.addEventListener('close',()=>origin?.focus());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
+</script><script type="text/plain" id="previous-font-license">Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: DejaVu fonts
+Upstream-Author: Stepan Roh <src@users.sourceforge.net> (original author),
+                  see /usr/share/doc/fonts-dejavu-core/AUTHORS for full list
+Source: https://dejavu-fonts.github.io/
+
+Files: *
+Copyright: Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. 
+ Bitstream Vera is a trademark of Bitstream, Inc.
+ DejaVu changes are in public domain.
+License: bitstream-vera
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of the fonts accompanying this license ("Fonts") and associated
+ documentation files (the "Font Software"), to reproduce and distribute the
+ Font Software, including without limitation the rights to use, copy, merge,
+ publish, distribute, and/or sell copies of the Font Software, and to permit
+ persons to whom the Font Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright and trademark notices and this permission notice shall
+ be included in all copies of one or more of the Font Software typefaces.
+ .
+ The Font Software may be modified, altered, or added to, and in particular
+ the designs of glyphs or characters in the Fonts may be modified and
+ additional glyphs or characters may be added to the Fonts, only if the fonts
+ are renamed to names not containing either the words "Bitstream" or the word
+ "Vera".
+ .
+ This License becomes null and void to the extent applicable to Fonts or Font
+ Software that has been modified and is distributed under the "Bitstream
+ Vera" names.
+ .
+ The Font Software may be sold as part of a larger software package but no
+ copy of one or more of the Font Software typefaces may be sold by itself.
+ .
+ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT,
+ TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME
+ FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING
+ ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+ THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE
+ FONT SOFTWARE.
+ .
+ Except as contained in this notice, the names of Gnome, the Gnome
+ Foundation, and Bitstream Inc., shall not be used in advertising or
+ otherwise to promote the sale, use or other dealings in this Font Software
+ without prior written authorization from the Gnome Foundation or Bitstream
+ Inc., respectively. For further information, contact: fonts at gnome dot
+ org.
+
+Files: debian/*
+Copyright: (C) 2005-2006 Peter Cernak <pce@users.sourceforge.net> 
+           (C) 2006-2011 Davide Viti <zinosat@tiscali.it>
+           (C) 2011-2013 Christian Perrier <bubulle@debian.org>
+           (C) 2013 Fabian Greffrath <fabian+debian@greffrath.com>
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ /usr/share/common-licenses/GPL-2'.
+</script><script type="text/plain" id="dymo-font-credit">Dymo embossed font, designed by the Letraset Type Studio exclusively for Dymo. Original distributed as a free download for web headings. Display adaptation: removed background rectangles; retained letter contours. Source: https://www.dafont.com/dymo.font
+Dymo embossed font - PC True Type Font 
+
+Free Download from the Dymo homepage: 
+
+http://www.dymo.com
+
+http://www.dymo.com/Downloads/Page/1,1192,FL-_AI-3,00.html
+
+Also available in these formats: 
+
+Mac Postscript Type 1
+Mac True Type 
+PC Postscript Type 1 
+PC True Type
+
+---
+
+               Embossing first came into existence during the
+               age of the great American railways. Passengers
+               had to label their luggage on the station using
+               the very first embossing machines. Dymo's
+               embossing font is now the most popular heading
+               font on the world wide web!
+
+               This font will give your headline designs a vivid
+               appearance that is bound to grab attention
+               wherever it is used. Designed by the Letraset
+               Type Studio, exclusively for Dymo.</script></body></html>
