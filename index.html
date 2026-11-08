@@ -116,7 +116,7 @@ footer{font:200 11px/1.85 monospace}
 
 
 /* One coordinated flip across the full title; hold WE ARE JANE DOE. */
-#title{display:flex;align-items:center;justify-content:center;gap:.035em}
+#title{display:flex;align-items:center;justify-content:flex-start;gap:.035em}
 .title-prefix,.title-name{display:inline-flex;gap:.035em;flex:none;vertical-align:baseline;letter-spacing:0}
 .title-name{white-space:nowrap}
 .flap{position:relative;display:block;width:auto;height:1.08em;perspective:700px;background:#080808;border-radius:1px}
@@ -133,7 +133,7 @@ footer{font:200 11px/1.85 monospace}
 .flap:after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#050505;box-shadow:0 1px #ffffff07;z-index:5;pointer-events:none}
 @keyframes flap-close{from{transform:rotateX(0);filter:brightness(1)}to{transform:rotateX(-90deg);filter:brightness(.35)}}
 @keyframes flap-open{from{transform:rotateX(90deg);filter:brightness(.35)}to{transform:rotateX(0);filter:brightness(1)}}
-@media(max-width:700px){#title{flex-direction:column;align-items:center;gap:.12em}.title-spacer{display:none}}
+@media(max-width:700px){#title{flex-direction:column;align-items:flex-start;gap:.12em}.title-spacer{display:none}}
 @media(prefers-reduced-motion:reduce){.flap-old-top{animation:none;visibility:hidden}.flap-new-bottom{animation:none;transform:none}}
 
 
