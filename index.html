@@ -136,9 +136,32 @@ footer{font:200 11px/1.85 monospace}
 @media(max-width:700px){#title{flex-direction:column;align-items:flex-start;gap:.12em}}
 @media(prefers-reduced-motion:reduce){.flap-old-top{animation:none;visibility:hidden}.flap-new-bottom{animation:none;transform:none}}
 
+
+/* Blood Bath stays behind the entire homepage. */
+body{position:relative;isolation:isolate;background:#050505}
+.blood-backdrop{position:fixed;inset:0;z-index:-1;pointer-events:none;background:#050505}
+.blood-backdrop video{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.blood-backdrop:after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.48)}
+.masthead,main,footer{position:relative}
+.triptych{background:transparent}
+.panel,.words,.portraits{background:rgba(5,5,5,.48)}
+.words .panel-copy,.portraits .panel-copy{background:linear-gradient(transparent,rgba(5,5,5,.65) 35%)}
+.words:after{background:linear-gradient(0deg,#05050566,transparent 70%)}
+.project-note,.collective p,.about-copy p,.about-copy .small,footer,.explore{color:#ccc}
+html.intro-loading .masthead,html.intro-loading main,html.intro-loading footer{opacity:0;visibility:hidden}
+html.intro-loading .flap-old-top,html.intro-loading .flap-new-bottom{animation-play-state:paused}
+html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animation:page-reveal 1.2s ease both}
+@keyframes page-reveal{from{opacity:0}to{opacity:1}}
+.motion-toggle{position:fixed;right:18px;bottom:18px;z-index:10;border:1px solid #ffffff55;background:#080808b3;padding:9px 12px;font:11px/1.4 monospace;cursor:pointer}
+.motion-toggle[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animation:none}}
+
 </style>
+<script>document.documentElement.classList.add('intro-loading');window.janeDoeRevealTimer=setTimeout(function(){document.documentElement.classList.remove('intro-loading');document.documentElement.classList.add('intro-ready');},6000);</script>
 </head>
 <body id="top">
+<div class="blood-backdrop" aria-hidden="true"><video id="blood-background" muted loop playsinline preload="auto" poster="https://natalianeuhaus.github.io/home/blood-bath-loop-poster-v1.jpg" tabindex="-1"><source src="https://natalianeuhaus.github.io/home/blood-bath-loop-v1.mp4" type="video/mp4"></video></div>
+<button class="motion-toggle" id="background-toggle" type="button" hidden>Pause background</button>
 <a class="skip" href="#explore">Skip to the project</a>
 <header class="masthead"><a class="brand" href="./" aria-label="I AM JANE DOE home">I AM JANE DOE</a><a class="about-link mono" href="#about">About<span class="plus" aria-hidden="true">+</span></a></header>
 <main>
@@ -186,6 +209,36 @@ window.addEventListener('scroll',function(){if(!scheduled){scheduled=true;reques
 window.addEventListener('resize',update);
 motion.addEventListener('change',update);
 update();
+})();
+</script>
+<script>
+(function(){
+const video=document.getElementById('blood-background');
+const toggle=document.getElementById('background-toggle');
+const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+function reveal(){
+ clearTimeout(window.janeDoeRevealTimer);
+ document.documentElement.classList.remove('intro-loading');
+ document.documentElement.classList.add('intro-ready');
+}
+function sync(){toggle.textContent=video.paused?'Play background':'Pause background';}
+video.addEventListener('loadeddata',reveal,{once:true});
+video.addEventListener('error',reveal,{once:true});
+video.querySelector('source').addEventListener('error',reveal,{once:true});
+video.addEventListener('play',sync);
+video.addEventListener('pause',sync);
+toggle.hidden=false;
+toggle.addEventListener('click',function(){
+ if(video.paused){video.play().catch(reveal);}else{video.pause();}
+});
+function applyMotion(){
+ if(motion.matches){video.pause();reveal();}
+ else{video.play().catch(reveal);}
+ sync();
+}
+motion.addEventListener('change',applyMotion);
+applyMotion();
+if(video.readyState>=2)reveal();
 })();
 </script>
 </body>
