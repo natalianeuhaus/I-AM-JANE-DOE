@@ -152,8 +152,6 @@ html.intro-loading .masthead,html.intro-loading main,html.intro-loading footer{o
 html.intro-loading .flap-old-top,html.intro-loading .flap-new-bottom{animation-play-state:paused}
 html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animation:page-reveal 1.2s ease both}
 @keyframes page-reveal{from{opacity:0}to{opacity:1}}
-.motion-toggle{position:fixed;right:18px;bottom:18px;z-index:10;border:1px solid #ffffff55;background:#080808b3;padding:9px 12px;font:11px/1.4 monospace;cursor:pointer}
-.motion-toggle[hidden]{display:none}
 @media(prefers-reduced-motion:reduce){html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animation:none}}
 
 
@@ -174,7 +172,6 @@ html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animati
 </head>
 <body id="top">
 <div class="blood-backdrop" aria-hidden="true"><video id="blood-background" muted loop playsinline preload="auto" poster="https://natalianeuhaus.github.io/home/blood-bath-loop-poster-v1.jpg" tabindex="-1"><source src="https://natalianeuhaus.github.io/home/blood-bath-loop-v1.mp4" type="video/mp4"></video></div>
-<button class="motion-toggle" id="background-toggle" type="button" hidden>Pause background</button>
 <a class="skip" href="#explore">Skip to the project</a>
 <header class="masthead"><a class="brand" href="./" aria-label="I AM JANE DOE home">I AM JANE DOE</a><a class="about-link mono" href="#about">About<span class="plus" aria-hidden="true">+</span></a></header>
 <main>
@@ -200,7 +197,7 @@ html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animati
 <div class="panel-copy"><h2 id="portraits-title">Portraits of<br>Jane Doe</h2><p>A portrait project.</p><div class="panel-cta mono"><span class="coming">Coming soon</span><span aria-hidden="true">—</span></div></div>
 </section>
 </section>
-<section class="collective" aria-labelledby="collective-title"><h2 id="collective-title">We are Jane Doe.</h2><p>Many experiences. Many voices.<br>A shared refusal to remain silent.</p></section>
+<section class="collective" aria-labelledby="collective-title"><h2 id="collective-title">Many experiences. Many voices.<br>A shared refusal to remain silent.</h2></section>
 <details class="about" id="about"><summary class="mono">About the project</summary><div class="about-copy"><p>I AM JANE DOE brings together publicly documented cases, first-person accounts, and a developing portrait project to examine sexual violence and the systems that enable it.</p><p>It is a space for testimony, memory, and resistance. A name that can protect an identity can also become a collective voice.</p><p class="small">Predatorpedia records cases and their aftermaths. In their words gathers statements with attribution and links to their sources. Portraits of Jane Doe is the next part of the project.</p></div></details>
 </main>
 <footer class="mono"><span>I AM JANE DOE</span><a href="#top" aria-label="Back to top">Back to top ↑</a></footer>
@@ -227,27 +224,20 @@ update();
 <script>
 (function(){
 const video=document.getElementById('blood-background');
-const toggle=document.getElementById('background-toggle');
+video.defaultPlaybackRate=0.65;
+video.playbackRate=0.65;
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
 function reveal(){
  clearTimeout(window.janeDoeRevealTimer);
  document.documentElement.classList.remove('intro-loading');
  document.documentElement.classList.add('intro-ready');
 }
-function sync(){toggle.textContent=video.paused?'Play background':'Pause background';}
 video.addEventListener('loadeddata',reveal,{once:true});
 video.addEventListener('error',reveal,{once:true});
 video.querySelector('source').addEventListener('error',reveal,{once:true});
-video.addEventListener('play',sync);
-video.addEventListener('pause',sync);
-toggle.hidden=false;
-toggle.addEventListener('click',function(){
- if(video.paused){video.play().catch(reveal);}else{video.pause();}
-});
 function applyMotion(){
  if(motion.matches){video.pause();reveal();}
  else{video.play().catch(reveal);}
- sync();
 }
 motion.addEventListener('change',applyMotion);
 applyMotion();
