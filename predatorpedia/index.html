@@ -423,7 +423,20 @@ footer{flex-wrap:wrap}
 .footer-share-status{font:inherit}
 .footer-share input{width:min(420px,80vw);padding:8px;background:transparent;color:inherit;border:1px solid currentColor;font:inherit}
 .footer-share input[hidden]{display:none}
-</style></head><body><a class="skip" href="#timeline">Skip to timeline</a><header><a class="wordmark" href="#top">PREDATORPEDIA | The Sexual Predators Encyclopedia</a><div class="header-right"><a href="../" aria-label="I AM JANE DOE home" style="font:10px monospace;letter-spacing:.08em;margin-right:18px;text-decoration:none">← BACK TO I AM JANE DOE</a><button id="index-toggle" aria-haspopup="dialog">INDEX &nbsp; +</button></div><div id="progress"></div></header><main id="top"><section class="hero" aria-labelledby="title"><img data-asset="2b1c94b7793fc637" alt="A crowd fills Washington during the 2017 Women’s March"><span class="hero-photo-note">WASHINGTON, D.C.<br>WOMEN’S MARCH / 2017</span><div class="hero-copy"><div class="eyebrow">Welcome to</div><h1 id="title">PREDATORPEDIA</h1><p class="hero-subtitle">The Sexual Predators Encyclopedia</p><div class="hero-bottom"><p>A timeline and an archive to remember the harm, the men responsible, and the systems that protected them.</p></div>
+</style><style id="jane-doe-shared-header">
+:root{--site-header-height:82px}
+body>header{height:auto;min-height:0;gap:20px;padding:28px 4vw;background:#050505;color:#eee;border-bottom:1px solid #292929}
+body>header .wordmark{max-width:none;flex-shrink:0;text-decoration:none;font:400 21px/1.2 Georgia,serif;letter-spacing:.12em}
+body>header .header-right{gap:20px;font:12px/1.2 monospace;letter-spacing:.1em}
+body>header .header-right>a{margin:0!important}
+body>header button{color:inherit;font:inherit;letter-spacing:inherit}
+body>header a:focus-visible,body>header button:focus-visible{outline:2px solid #eee}
+.hero{margin-top:var(--site-header-height);min-height:calc(100svh - var(--site-header-height))}
+html{scroll-padding-top:calc(var(--site-header-height) + 7px)}
+dialog#index{top:var(--site-header-height);max-height:calc(100svh - var(--site-header-height))}
+@media(max-width:700px){body>header{flex-wrap:wrap}body>header .header-right{width:100%;justify-content:space-between;gap:12px}body>header .header-right>a{white-space:nowrap}}
+@media(max-width:600px){body>header{padding:22px 5vw}body>header .wordmark{font-size:16px}body>header .header-right{font-size:10px}}
+</style></head><body><a class="skip" href="#timeline">Skip to timeline</a><header><a class="wordmark brand" href="../" aria-label="I AM JANE DOE home">I AM JANE DOE</a><div class="header-right"><a href="../" aria-label="I AM JANE DOE home" >← BACK TO I AM JANE DOE</a><button id="index-toggle" aria-haspopup="dialog">INDEX &nbsp; +</button></div><div id="progress"></div></header><main id="top"><section class="hero" aria-labelledby="title"><img data-asset="2b1c94b7793fc637" alt="A crowd fills Washington during the 2017 Women’s March"><span class="hero-photo-note">WASHINGTON, D.C.<br>WOMEN’S MARCH / 2017</span><div class="hero-copy"><div class="eyebrow">Welcome to</div><h1 id="title">PREDATORPEDIA</h1><p class="hero-subtitle">The Sexual Predators Encyclopedia</p><div class="hero-bottom"><p>A timeline and an archive to remember the harm, the men responsible, and the systems that protected them.</p></div>
 <div class="archive-search" role="search" aria-label="Search archive">
 <label for="person-search">Search by name</label>
 <div class="search-field"><input id="person-search" type="search" placeholder="Enter a name…" autocomplete="off" aria-controls="person-results" aria-describedby="search-status"><button id="clear-person-search" type="button" aria-label="Clear search" hidden>×</button></div>
@@ -584,5 +597,13 @@ status.textContent='Link copied';
 reset=setTimeout(()=>{status.textContent='';},4000);
 }catch(error){link.value=data.url;link.hidden=false;status.textContent='Copy this link:';link.focus();link.select();}
 });
+})();
+</script><script>
+(()=>{
+const header=document.querySelector('body>header');
+function sizeHeader(){document.documentElement.style.setProperty('--site-header-height',header.getBoundingClientRect().height+'px');}
+sizeHeader();
+if('ResizeObserver' in window)new ResizeObserver(sizeHeader).observe(header);
+else window.addEventListener('resize',sizeHeader);
 })();
 </script></body></html>
