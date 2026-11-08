@@ -374,7 +374,7 @@ let reset;
 button.addEventListener('click',async()=>{
 clearTimeout(reset);status.textContent='';link.hidden=true;
 const url=new URL(window.location.href);url.hash='';url.search='';
-const data={title:document.title,url:url.href};
+const data={title:'Share yours',url:url.href};
 if(navigator.share){
 try{await navigator.share(data);return;}catch(error){if(error.name==='AbortError')return;}
 }
