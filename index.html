@@ -159,7 +159,8 @@ html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animati
 
 /* Expand the selected menu toward either side, as on Burlesque. */
 @media(min-width:701px) and (hover:hover) and (pointer:fine){
- .triptych{transition:grid-template-columns .75s cubic-bezier(.22,1,.36,1)}
+ .triptych{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);transition:grid-template-columns .75s cubic-bezier(.22,1,.36,1)}
+ .triptych:has(>.panel:hover),.triptych:has(>.panel:focus-visible){transition-duration:1s;transition-timing-function:cubic-bezier(.42,0,.22,1)}
  .triptych:has(>.cases:hover),.triptych:has(>.cases:focus-visible){grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)}
  .triptych:has(>.words:hover),.triptych:has(>.words:focus-visible){grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr)}
  .triptych:has(>.portraits:hover){grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)}
