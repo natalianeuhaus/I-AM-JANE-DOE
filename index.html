@@ -79,14 +79,49 @@ footer a:hover{text-decoration:underline;text-underline-offset:5px}
 @media(max-width:900px) and (min-width:701px){.panel{min-height:520px;height:65vh}.panel-copy{padding:24px 17px}.panel-number{left:17px}.panel p{font-size:13px}.panel-cta{font-size:9px}.tapes{bottom:170px}.portrait-type{inset:90px 15px auto}.photo-note{display:none}}
 @media(max-width:700px){:root{--gutter:5vw!important}.masthead{margin:0 5vw;padding-top:16px}.masthead .project{font-size:9px;max-width:180px}.intro{padding:30px 5vw}.intro h1{font-size:17.2vw;letter-spacing:-.07em;line-height:.9;white-space:normal;margin-bottom:22px}.i-am{display:block}.intro-bottom{align-items:start}.declaration{font-size:15px;max-width:290px}.explore{display:none}.triptych{grid-template-columns:1fr;gap:1px}.panel{height:auto;min-height:570px;max-height:none}.panel h2{font-size:42px;letter-spacing:-.055em}.panel p{font-size:16px;max-width:330px;min-height:0}.panel-copy{padding:30px 23px 23px}.panel-cta{font-size:11px;margin-top:24px}.panel-number{left:23px}.tapes{inset:65px -12px 200px}.tape{font-size:30px}.portrait-type{font-size:110px;inset:85px 30px auto}.collective{margin:0 5vw;padding:40px 0;display:block}.collective p{margin-top:22px;max-width:290px}.about,footer{margin-left:5vw;margin-right:5vw}footer{font-size:9px}.about-copy{padding-bottom:25px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.art img,.tapes,.arrow{transition:none}.triptych{--gutter:4vw}}
+
+/* Shared typography and spacing with In their words. */
+:root{--paper:#eee;--line:#292929;--red:#050505}
+body{background:#050505;font-family:Georgia,serif}
+.mono{font:200 11px/1.85 monospace;letter-spacing:.1em}
+.masthead{margin:0;padding:28px 4vw;border-bottom:1px solid #292929}
+.brand{font:400 21px Georgia,serif;letter-spacing:.12em;text-decoration:none}
+.about-link{padding:0;font:200 11px/1.85 monospace}
+main{padding-top:50px}
+.intro{padding:0 4vw 30px}
+h1{font:400 clamp(48px,6.6vw,96px)/1 Georgia,serif;letter-spacing:-.04em;margin:0 0 25px;white-space:normal}
+h1 .i-am{margin-right:0}
+.project-note{font:200 11px/1.85 monospace;color:#aaa;letter-spacing:.08em;text-transform:uppercase;margin:0 0 20px}
+.declaration{font:200 11px/1.85 monospace}
+.triptych{background:#292929;border-color:#292929}
+.panel{min-height:510px;background:#101010}
+.panel h2{font:400 clamp(28px,2.6vw,42px)/1.12 Georgia,serif;letter-spacing:-.04em}
+.panel p{font:200 11px/1.85 monospace}
+.panel-cta{font:200 11px/1.85 monospace;letter-spacing:.04em;border-color:#555}
+.panel-number,.photo-note{font:200 10px/1.85 monospace}
+.tapes{inset:70px 0 210px;gap:0;transform:none;justify-content:center}
+.words:hover .tapes{transform:none}
+.tape,.tape:nth-child(2n),.tape:nth-child(3n){align-self:stretch;margin:0;font:400 14px/1.5 Emboss,monospace;letter-spacing:.13em;padding:9px 12px;min-height:39px;background:linear-gradient(180deg,#343434 0,#181818 3%,#080808 10%,#131313 46%,#0a0a0a 86%,#272727 97%,#0a0a0a 100%);color:#e7e7e2;border:0;box-shadow:inset 0 1px #7778,inset 1px 0 #9995,inset -1px 0 #000,inset 0 -1px #000;text-shadow:0 -1px 0 #fff,1px 1px 0 #777,1px 2px 0 #444,2px 3px 2px #000}
+.portraits{background:#101010;color:#eee}
+.portrait-type{font:400 clamp(65px,6vw,100px)/.96 Georgia,serif;letter-spacing:-.04em;color:#777;opacity:.8;inset:80px 26px auto;transform:none}
+.portrait-type span:nth-child(2){align-self:flex-start}
+.portrait-type span:nth-child(3){font:inherit;align-self:flex-start;margin:0;letter-spacing:inherit}
+.portraits .panel-copy{background:linear-gradient(transparent,#101010 35%)}
+.portraits .panel-cta{border-color:#555}
+.collective h2{font-size:clamp(30px,4vw,54px);letter-spacing:-.04em}
+.collective p,.about-copy p{font:200 11px/1.85 monospace;color:#bbb}
+.about-copy .small{font:200 11px/1.85 monospace}
+footer{font:200 11px/1.85 monospace}
+@media(max-width:700px){.masthead{margin:0;padding:22px 5vw;gap:16px}.brand{font-size:16px}main{padding-top:38px}.intro{padding:0 5vw 24px}.intro h1{font:400 clamp(48px,10vw,70px)/1 Georgia,serif;letter-spacing:-.04em}.declaration{font:200 11px/1.85 monospace}.panel{min-height:500px}.panel h2{font:400 36px/1.1 Georgia,serif}.panel p{font:200 11px/1.85 monospace}.panel-cta{font:200 11px/1.85 monospace}.tapes{inset:70px 0 190px}.tape{font-size:16px;letter-spacing:.09em;padding:12px 11px;min-height:50px}.portrait-type{font-size:85px;inset:65px 23px auto}}
+
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#explore">Skip to the project</a>
-<header class="masthead"><p class="project mono">An art &amp; documentary project</p><a class="about-link mono" href="#about">About<span class="plus" aria-hidden="true">+</span></a></header>
+<header class="masthead"><a class="brand" href="./" aria-label="I AM JANE DOE home">I AM JANE DOE</a><a class="about-link mono" href="#about">About<span class="plus" aria-hidden="true">+</span></a></header>
 <main>
 <section class="intro" aria-labelledby="title">
-<h1 id="title"><span class="i-am">I AM</span> JANE DOE</h1>
+<p class="project-note">An art &amp; documentary project</p><h1 id="title"><span class="i-am">I AM</span> JANE DOE</h1>
 <div class="intro-bottom"><p class="declaration">Sexual violence. The systems that enable it.<br>The voices that refuse to remain silent.</p><a class="explore mono" href="#explore">Scroll to explore <span aria-hidden="true">↓</span></a></div>
 </section>
 <section class="triptych" id="explore" aria-label="Three parts of I AM JANE DOE">
