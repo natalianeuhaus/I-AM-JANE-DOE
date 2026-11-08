@@ -8,16 +8,16 @@
 <link rel="canonical" href="https://natalianeuhaus.github.io/I-AM-JANE-DOE/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="I AM JANE DOE">
-<meta property="og:title" content="I AM JANE DOE">
+<meta property="og:title" content="WE ARE JANE DOE">
 <meta property="og:description" content="Sexual violence. The systems that enable it. The voices that refuse to remain silent. An art and documentary project in three parts.">
 <meta property="og:url" content="https://natalianeuhaus.github.io/I-AM-JANE-DOE/">
-<meta property="og:image" content="https://natalianeuhaus.github.io/home/blood-bath-loop-poster-v1.jpg">
-<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image" content="https://natalianeuhaus.github.io/I-AM-JANE-DOE/assets/share-jane-doe-title.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:alt" content="Blood Bath — I AM JANE DOE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="I AM JANE DOE">
+<meta name="twitter:title" content="WE ARE JANE DOE">
 <meta name="twitter:description" content="Sexual violence. The systems that enable it. The voices that refuse to remain silent.">
-<meta name="twitter:image" content="https://natalianeuhaus.github.io/home/blood-bath-loop-poster-v1.jpg">
+<meta name="twitter:image" content="https://natalianeuhaus.github.io/I-AM-JANE-DOE/assets/share-jane-doe-title.png">
 <meta name="twitter:image:alt" content="Blood Bath — I AM JANE DOE">
 <meta name="theme-color" content="#080808">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22%23dedfe0%22%2F%3E%3Cpath%20fill%3D%22%23171717%22%20d%3D%22M224%20104h150v200c0%2070-39%20108-109%20108-73%200-115-38-115-103h72c0%2029%2014%2041%2040%2041s39-15%2039-46V166h-77z%22%2F%3E%3C%2Fsvg%3E">
@@ -294,7 +294,7 @@ let reset;
 button.addEventListener('click',async()=>{
 clearTimeout(reset);status.textContent='';link.hidden=true;
 const url=new URL(window.location.href);url.hash='';url.search='';
-const data={title:document.title,url:url.href};
+const data={title:'WE ARE JANE DOE',url:url.href};
 if(navigator.share){
 try{await navigator.share(data);return;}catch(error){if(error.name==='AbortError')return;}
 }
