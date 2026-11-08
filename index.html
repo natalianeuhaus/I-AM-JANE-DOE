@@ -115,17 +115,22 @@ footer{font:200 11px/1.85 monospace}
 @media(max-width:700px){.masthead{margin:0;padding:22px 5vw;gap:16px}.brand{font-size:16px}main{padding-top:38px}.intro{padding:0 5vw 24px}.intro h1{font:400 clamp(48px,10vw,70px)/1 Georgia,serif;letter-spacing:-.04em}.declaration{font:200 11px/1.85 monospace}.panel{min-height:500px}.panel h2{font:400 36px/1.1 Georgia,serif}.panel p{font:200 11px/1.85 monospace}.panel-cta{font:200 11px/1.85 monospace}.tapes{inset:70px 0 190px}.tape{font-size:16px;letter-spacing:.09em;padding:12px 11px;min-height:50px}.portrait-type{font-size:85px;inset:65px 23px auto}}
 
 
-/* Both prefixes share one grid cell, keeping JANE DOE stationary. */
-#title{display:flex;align-items:baseline;gap:.22em}
-.title-prefix{display:inline-grid;flex:none;text-align:right}
-.title-prefix>span{grid-area:1/1;white-space:nowrap}
+/* A single split-flap transition, ending on WE ARE. */
+#title{display:flex;align-items:center;gap:.22em}
+.title-prefix{display:inline-flex;gap:.025em;flex:none;vertical-align:baseline;letter-spacing:0}
 .title-name{white-space:nowrap}
-.title-i{animation:title-i-fade 12s ease-in-out infinite}
-.title-we{opacity:0;animation:title-we-fade 12s ease-in-out infinite}
-@keyframes title-i-fade{0%,35%,100%{opacity:1}45%,85%{opacity:0}95%{opacity:1}}
-@keyframes title-we-fade{0%,35%,95%,100%{opacity:0}45%,85%{opacity:1}}
-@media(max-width:700px){#title{flex-direction:column;align-items:flex-start;gap:0}.title-prefix{text-align:left}}
-@media(prefers-reduced-motion:reduce){.title-i,.title-we{animation:none}.title-i{opacity:1}.title-we{opacity:0}}
+.flap{position:relative;display:block;width:.95em;height:1.08em;perspective:700px;background:#111;border-radius:2px;font-variant-numeric:tabular-nums}
+.flap-half{position:absolute;left:0;width:100%;height:50%;overflow:hidden;background:#111;backface-visibility:hidden}
+.flap-half>span{position:absolute;left:0;width:100%;height:1.08em;line-height:1.08em;text-align:center;white-space:pre}
+.flap-top{top:0;border-radius:2px 2px 0 0}.flap-top>span{top:0}
+.flap-bottom{bottom:0;border-radius:0 0 2px 2px}.flap-bottom>span{bottom:0}
+.flap-old-top{z-index:3;transform-origin:bottom;animation:flap-close .38s ease-in var(--delay) forwards}
+.flap-new-bottom{z-index:4;transform:rotateX(90deg);transform-origin:top;animation:flap-open .42s ease-out calc(var(--delay) + .38s) forwards}
+.flap:after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#050505;box-shadow:0 1px #ffffff12;z-index:5;pointer-events:none}
+@keyframes flap-close{from{transform:rotateX(0);filter:brightness(1)}to{transform:rotateX(-90deg);filter:brightness(.35)}}
+@keyframes flap-open{from{transform:rotateX(90deg);filter:brightness(.35)}to{transform:rotateX(0);filter:brightness(1)}}
+@media(max-width:700px){#title{flex-direction:column;align-items:flex-start;gap:.12em}}
+@media(prefers-reduced-motion:reduce){.flap-old-top{animation:none;visibility:hidden}.flap-new-bottom{animation:none;transform:none}}
 
 </style>
 </head>
@@ -134,7 +139,7 @@ footer{font:200 11px/1.85 monospace}
 <header class="masthead"><a class="brand" href="./" aria-label="I AM JANE DOE home">I AM JANE DOE</a><a class="about-link mono" href="#about">About<span class="plus" aria-hidden="true">+</span></a></header>
 <main>
 <section class="intro" aria-labelledby="title">
-<p class="project-note">An art &amp; documentary project</p><h1 id="title" aria-label="I am Jane Doe. We are Jane Doe."><span class="title-prefix" aria-hidden="true"><span class="title-i">I AM</span><span class="title-we">WE ARE</span></span><span class="title-name" aria-hidden="true">JANE DOE</span></h1>
+<p class="project-note">An art &amp; documentary project</p><h1 id="title" aria-label="I am Jane Doe. We are Jane Doe."><span class="title-prefix" aria-hidden="true"><span class="flap" style="--delay:2.00s"><span class="flap-half flap-top"><span>W</span></span><span class="flap-half flap-bottom"><span>I</span></span><span class="flap-half flap-top flap-old-top"><span>I</span></span><span class="flap-half flap-bottom flap-new-bottom"><span>W</span></span></span><span class="flap" style="--delay:2.12s"><span class="flap-half flap-top"><span>E</span></span><span class="flap-half flap-bottom"><span> </span></span><span class="flap-half flap-top flap-old-top"><span> </span></span><span class="flap-half flap-bottom flap-new-bottom"><span>E</span></span></span><span class="flap" style="--delay:2.24s"><span class="flap-half flap-top"><span> </span></span><span class="flap-half flap-bottom"><span>A</span></span><span class="flap-half flap-top flap-old-top"><span>A</span></span><span class="flap-half flap-bottom flap-new-bottom"><span> </span></span></span><span class="flap" style="--delay:2.36s"><span class="flap-half flap-top"><span>A</span></span><span class="flap-half flap-bottom"><span>M</span></span><span class="flap-half flap-top flap-old-top"><span>M</span></span><span class="flap-half flap-bottom flap-new-bottom"><span>A</span></span></span><span class="flap" style="--delay:2.48s"><span class="flap-half flap-top"><span>R</span></span><span class="flap-half flap-bottom"><span> </span></span><span class="flap-half flap-top flap-old-top"><span> </span></span><span class="flap-half flap-bottom flap-new-bottom"><span>R</span></span></span><span class="flap" style="--delay:2.60s"><span class="flap-half flap-top"><span>E</span></span><span class="flap-half flap-bottom"><span> </span></span><span class="flap-half flap-top flap-old-top"><span> </span></span><span class="flap-half flap-bottom flap-new-bottom"><span>E</span></span></span></span><span class="title-name" aria-hidden="true">JANE DOE</span></h1>
 <div class="intro-bottom"><p class="declaration">Sexual violence. The systems that enable it.<br>The voices that refuse to remain silent.</p><a class="explore mono" href="#explore">Scroll to explore <span aria-hidden="true">↓</span></a></div>
 </section>
 <section class="triptych" id="explore" aria-label="Three parts of I AM JANE DOE">
