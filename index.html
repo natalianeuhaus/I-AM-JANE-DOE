@@ -173,7 +173,16 @@ html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animati
 .collective h2{font:200 16px/1 monospace;letter-spacing:.15em}
 </style>
 <script>document.documentElement.classList.add('intro-loading');window.janeDoeRevealTimer=setTimeout(function(){document.documentElement.classList.remove('intro-loading');document.documentElement.classList.add('intro-ready');},6000);</script>
-</head>
+<style>
+footer{flex-wrap:wrap}
+.footer-share{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-top:8px}
+.footer-share button{appearance:none;border:0;border-bottom:1px solid currentColor;border-radius:0;background:transparent;color:inherit;font:inherit;letter-spacing:.04em;padding:5px 0;cursor:pointer}
+.footer-share button:hover{opacity:.75}
+.footer-share button:focus-visible{outline:1px solid currentColor;outline-offset:5px}
+.footer-share-status{font:inherit}
+.footer-share input{width:min(420px,80vw);padding:8px;background:transparent;color:inherit;border:1px solid currentColor;font:inherit}
+.footer-share input[hidden]{display:none}
+</style></head>
 <body id="top">
 <div class="blood-backdrop" aria-hidden="true"><video id="blood-background" muted loop playsinline preload="auto" poster="https://natalianeuhaus.github.io/home/blood-bath-loop-poster-v1.jpg" tabindex="-1"><source src="https://natalianeuhaus.github.io/home/blood-bath-loop-v1.mp4" type="video/mp4"></video></div>
 <a class="skip" href="#explore">Skip to the project</a>
@@ -204,7 +213,7 @@ html.intro-ready .masthead,html.intro-ready main,html.intro-ready footer{animati
 <section class="collective" aria-labelledby="collective-title"><h2 id="collective-title">////////</h2></section>
 <details class="about" id="about"><summary class="mono">About the project</summary><div class="about-copy"><p>I AM JANE DOE brings together publicly documented cases, first-person accounts, and a developing portrait project to examine sexual violence and the systems that enable it.</p><p>It is a space for testimony, memory, and resistance. A name that can protect an identity can also become a collective voice.</p><p class="small">Predatorpedia records cases and their aftermaths. In their words gathers statements with attribution and links to their sources. Portraits of Jane Doe is the next part of the project.</p></div></details>
 </main>
-<footer class="mono"><span>I AM JANE DOE</span><a href="#top" aria-label="Back to top">Back to top ↑</a></footer>
+<footer class="mono"><span>I AM JANE DOE</span><a href="#top" aria-label="Back to top">Back to top ↑</a><div class="footer-share"><button type="button" id="share-with-friends">Share with friends ↗</button><span class="footer-share-status" id="share-status" role="status" aria-live="polite"></span><input id="share-link" type="text" readonly aria-label="Page link to copy" hidden></div></footer>
 <script>
 (function(){
 const about=document.getElementById('about');
@@ -248,5 +257,26 @@ applyMotion();
 if(video.readyState>=2)reveal();
 })();
 </script>
-</body>
+<script>
+(()=>{
+const button=document.getElementById('share-with-friends');
+const status=document.getElementById('share-status');
+const link=document.getElementById('share-link');
+let reset;
+button.addEventListener('click',async()=>{
+clearTimeout(reset);status.textContent='';link.hidden=true;
+const url=new URL(window.location.href);url.hash='';url.search='';
+const data={title:document.title,url:url.href};
+if(navigator.share){
+try{await navigator.share(data);return;}catch(error){if(error.name==='AbortError')return;}
+}
+try{
+if(!navigator.clipboard)throw new Error('Clipboard unavailable');
+await navigator.clipboard.writeText(data.url);
+status.textContent='Link copied';
+reset=setTimeout(()=>{status.textContent='';},4000);
+}catch(error){link.value=data.url;link.hidden=false;status.textContent='Copy this link:';link.focus();link.select();}
+});
+})();
+</script></body>
 </html>
