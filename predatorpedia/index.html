@@ -436,6 +436,11 @@ html{scroll-padding-top:calc(var(--site-header-height) + 7px)}
 dialog#index{top:var(--site-header-height);max-height:calc(100svh - var(--site-header-height))}
 @media(max-width:700px){body>header{flex-wrap:wrap}body>header .header-right{width:100%;justify-content:space-between;gap:12px}body>header .header-right>a{white-space:nowrap}}
 @media(max-width:600px){body>header{padding:22px 5vw}body>header .wordmark{font-size:16px}body>header .header-right{font-size:10px}}
+</style><style>
+#back-to-top{right:24px;bottom:22px;width:auto;height:auto;display:block;background:#080808;color:#eee;border:1px solid #666;border-radius:0;padding:12px 18px;text-decoration:none;font:13px monospace;box-shadow:none}
+#back-to-top[hidden]{display:none}
+#back-to-top:hover{color:#fff;border-color:#999}
+#back-to-top:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 </style></head><body><a class="skip" href="#timeline">Skip to timeline</a><header><a class="wordmark brand" href="../" aria-label="I AM JANE DOE home">I AM JANE DOE</a><div class="header-right"><a href="../" aria-label="I AM JANE DOE home" >← BACK TO I AM JANE DOE</a><button id="index-toggle" aria-haspopup="dialog">INDEX &nbsp; +</button></div><div id="progress"></div></header><main id="top"><section class="hero" aria-labelledby="title"><img data-asset="2b1c94b7793fc637" alt="A crowd fills Washington during the 2017 Women’s March"><span class="hero-photo-note">WASHINGTON, D.C.<br>WOMEN’S MARCH / 2017</span><div class="hero-copy"><div class="eyebrow">Welcome to</div><h1 id="title">PREDATORPEDIA</h1><p class="hero-subtitle">The Sexual Predators Encyclopedia</p><div class="hero-bottom"><p>A timeline and an archive to remember the harm, the men responsible, and the systems that protected them.</p></div>
 <div class="archive-search" role="search" aria-label="Search archive">
 <label for="person-search">Search by name</label>
@@ -551,7 +556,7 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
-</script><button id="back-to-top" type="button" aria-label="Back to top" title="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V4M5 11l7-7 7 7"/></svg></button>
+</script><button id="back-to-top" type="button" aria-label="Back to top" title="Back to top" hidden>↑ TOP</button>
 <script>(()=>{const button=document.getElementById('back-to-top');function update(){button.hidden=window.scrollY<500}window.addEventListener('scroll',update,{passive:true});update();button.addEventListener('click',()=>{window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});const home=document.querySelector('.wordmark');if(home)home.focus({preventScroll:true})})})();</script><script>(()=>{
 const field=document.getElementById('person-search'),results=document.getElementById('person-results'),status=document.getElementById('search-status'),missing=document.getElementById('person-missing');
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
